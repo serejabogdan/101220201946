@@ -1,7 +1,7 @@
 import React from 'react';
 import './Comments.scss';
 
-const Comments = () => {
+const Comments = (props) => {
   return (
     <div className="comments">
       <div className="comments__info">
@@ -25,32 +25,15 @@ const Comments = () => {
         </div>
       </div>
       <div className="comments__last">
-        <div className="comments__item">
-          <div className="person-info">
-            <div className="person-name">Самуил</div>
-            <div className="comment-date">13 октября 2011</div>
+        {props.state.map(({personName, date, content}, index) => (
+          <div key={personName + index} className="comments__item comment">
+            <div className="comment__person-info">
+              <div className="comment__person-name">{personName}</div>
+              <div className="comment__date">{date}</div>
+            </div>
+            <div className="comment__content">{content}</div>
           </div>
-          <div className="comments__content">Привет, Верунь! ниче себе ты крутая. фотка класс!!!!</div>
-        </div>
-        <div className="comments__item">
-          <div className="person-info">
-            <div className="person-name">Лилия Семёновна</div>
-            <div className="comment-date">14 октября 2011</div>
-          </div>
-          <div className="comments__content">
-            Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент, это
-            и есть всемирно известный центр огранки алмазов и торговли бриллиантами?
-          </div>
-        </div>
-        <div className="comments__item">
-          <div className="person-info">
-            <div className="person-name">Лилия Семёновна</div>
-            <div className="comment-date">14 октября 2011</div>
-          </div>
-          <div className="comments__content">
-            Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент?
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
