@@ -1,0 +1,87 @@
+@import '../variables.scss';
+
+.services {
+  margin-left: 150px;
+  margin-right: 10px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+
+  &__title {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+  }
+
+  &__wrapper {
+    margin-top: 7px;
+
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+  }
+
+  &__all {
+    margin-top: 9px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    margin-left: 0;
+  }
+}
+
+.statistics {
+  margin: 16px 0;
+  border-left: 1px solid rgba(51, 51, 51, 0.2);
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__item + &__item {
+    margin-top: 2px;
+  }
+
+  &__title {
+    font-weight: normal;
+    position: relative;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+  }
+}
+
+.progress {
+  height: 24px;
+  position: absolute;
+  border-radius: 0px 3px 3px 0px;
+  background-color: #ace2f8;
+
+  &-one {
+    background-color: #b1e19b;
+    width: 219px;
+  }
+
+  &-two {
+    width: 54px;
+  }
+  &-three {
+    width: 36px;
+  }
+}
+
+.statistics__quantity,
+.services__all {
+  margin-right: 39px;
+}
