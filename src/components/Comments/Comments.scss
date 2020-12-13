@@ -30,7 +30,14 @@
     align-items: start;
   }
 
-  &__title {
+  &__filter-last,
+  &__filter-all {
+    border: none;
+    outline: none;
+    background: none;
+  }
+
+  &__filter-last {
     margin-right: 8px;
 
     @include fontStyle(bold, 16px, 16px);

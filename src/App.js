@@ -22,7 +22,7 @@ function App() {
     <div className="wrapper">
       <User />
       <Services />
-      <Comments state={state} />
+      <Comments comments={state} />
       <CommentForm onAddComment={onAddComment} />
     </div>
   );
