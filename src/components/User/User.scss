@@ -1,4 +1,5 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .user {
   padding: 14px 5px;
@@ -22,16 +23,13 @@
   }
 
   &__name {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
+    @include fontStyle(bold, 16px, 20px);
     margin-bottom: 2px;
     color: $primary-font-color;
   }
 
   &__job-title {
-    font-size: 12px;
-    line-height: 20px;
+    @include fontStyle(normal, 12px, 20px);
     color: $secondary-font-color;
     margin-bottom: 5px;
   }
@@ -44,7 +42,6 @@
     padding: 10px 14px 10px 45px;
     margin-left: -46px;
 
-    font-size: 14px;
-    line-height: 20px;
+    @include fontStyle(normal, 14px, 20px);
   }
 }

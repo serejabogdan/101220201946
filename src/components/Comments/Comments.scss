@@ -1,9 +1,8 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .comments {
   margin-top: 20px;
-  font-size: 12px;
-  line-height: 14px;
 
   &__info,
   &__filter,
@@ -11,6 +10,11 @@
   &__likes,
   &__amount {
     display: flex;
+  }
+
+  &__statistics {
+    margin-right: 2px;
+    @include fontStyle(normal, 12px, 14px);
   }
 
   &__filter {
@@ -28,14 +32,12 @@
 
   &__title {
     margin-right: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 16px;
+
+    @include fontStyle(bold, 16px, 16px);
   }
 
   &__filter-all {
-    font-size: 14px;
-    line-height: 16px;
+    @include fontStyle(normal, 14px, 16px);
     color: #005da1;
     text-decoration-line: underline;
   }
@@ -59,30 +61,26 @@
 }
 
 .comment__person-name {
-  font-size: 14px;
-  line-height: 19px;
-  font-weight: bold;
+  @include fontStyle(bold, 14px, 19px);
   margin-right: 10px;
 }
 
 .comment__date {
-  font-size: 11px;
-  line-height: 19px;
+  @include fontStyle(normal, 11px, 19px);
   color: $secondary-font-color;
 }
 
 .comment__content {
+  background-color: #f2fbff;
   margin-top: 10px;
   margin-bottom: 16px;
   padding: 11px 20px;
-  background: #f2fbff;
   border: 1px solid #c4cbcf;
   box-sizing: border-box;
   box-shadow: 0px 4px 10px rgba(128, 128, 128, 0.1);
 
   position: relative;
-  font-size: 14px;
-  line-height: 19px;
+  @include fontStyle(normal, 14px, 19px);
 }
 .comment__content::before,
 .comment__content::after {

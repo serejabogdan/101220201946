@@ -1,17 +1,16 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .services {
   margin-left: 150px;
-  margin-right: 10px;
   color: $primary-font-color;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 15px;
 
   &__title {
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
+
+    @include fontStyle(normal, 13px, 15px);
   }
 
   &__wrapper {
@@ -23,9 +22,8 @@
 
   &__amount {
     margin-top: 9px;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 26px;
+
+    @include fontStyle(bold, 16px, 26px);
 
     display: flex;
     justify-content: space-between;
@@ -53,12 +51,15 @@
   }
 
   &__title {
-    font-weight: normal;
+    @include fontStyle(normal, 13px, 26px);
     position: relative;
     height: 24px;
     display: flex;
     align-items: center;
     margin-left: 6px;
+  }
+  &__quantity {
+    @include fontStyle(bold, 13px, 15px);
   }
 }
 
