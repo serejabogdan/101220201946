@@ -5,7 +5,8 @@ import Services from './components/Services/Services';
 import Comments from './components/Comments/Comments';
 import CommentForm from './components/CommentForm/CommentForm';
 
-import {initialState, setLocalStorage} from './utils';
+import {setLocalStorage} from './utils';
+import initialState from './initialState';
 
 function App() {
   const localStorageKey = 'comments';
