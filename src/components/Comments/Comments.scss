@@ -22,6 +22,10 @@
     justify-content: space-between;
   }
 
+  &__info {
+    align-items: start;
+  }
+
   &__title {
     margin-right: 8px;
     font-weight: bold;
@@ -43,38 +47,6 @@
 
   &__amount {
     margin-left: 16px;
-  }
-
-  &-icon,
-  &-icon-back {
-    width: 14px;
-    height: 10px;
-    border-radius: 1px;
-    background-color: #73b4d5;
-    position: relative;
-    margin-right: 3px;
-  }
-
-  &-icon::after,
-  &-icon-back::after {
-    content: '';
-    top: 8px;
-    position: absolute;
-    border-left: 6px solid transparent;
-    border-right: 6px solid #73b4d5;
-    border-bottom: 6px solid transparent;
-  }
-
-  &-icon-back {
-    background-color: #507e95;
-    z-index: -1;
-    height: 11px;
-  }
-
-  &-icon-back::after {
-    border-right: 6px solid #507e95;
-    z-index: -1;
-    top: 9.5px;
   }
 
   &__last {
@@ -136,58 +108,12 @@
   border-top: 10px solid transparent;
 }
 
-.like-icon,
-.like-icon-back {
-  width: 6px;
-  height: 6px;
-  position: relative;
-  background-color: #73b4d5;
-  border-radius: 100%;
-  top: -2px;
-  margin-right: 10px;
+.like-icon {
+  margin-top: 2px;
+  margin-right: 2px;
 }
 
-.like-icon::before,
-.like-icon-back::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background-color: #73b4d5;
-  border-radius: 100%;
-
-  position: absolute;
-  left: 6px;
-}
-
-.like-icon::after,
-.like-icon-back::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #73b4d5;
-
-  position: absolute;
-  top: 4px;
-}
-
-.like-icon-back,
-.like-icon-back::before {
-  background-color: #507e95;
-}
-
-.like-icon-back,
-.like-icon-back::before,
-.like-icon-back::after {
-  z-index: -1;
-}
-.like-icon-back {
-  left: 0;
-  top: 1px;
-}
-
-.like-icon-back::after {
-  content: '';
-  border-top-color: #507e95;
+.comments-icon {
+  margin-top: 4px;
+  margin-right: 3px;
 }

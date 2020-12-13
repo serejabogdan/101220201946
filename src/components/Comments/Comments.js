@@ -1,6 +1,9 @@
 import React from 'react';
 import './Comments.scss';
 
+import likeIcon from '../../assets/svg/like.svg';
+import commentIcon from '../../assets/svg/comment.svg';
+
 const Comments = (props) => {
   return (
     <div className="comments">
@@ -11,15 +14,11 @@ const Comments = (props) => {
         </div>
         <div className="comments__statistics">
           <div className="comments__likes">
-            <div className="like-icon">
-              <div className="like-icon-back"></div>
-            </div>
+            <img className="like-icon icon" src={likeIcon} alt="like icon" />
             131
           </div>
           <div className="comments__amount">
-            <div className="comments-icon">
-              <div className="comments-icon-back"></div>
-            </div>
+            <img className="comments-icon icon" src={commentIcon} alt="comments icon" />
             14
           </div>
         </div>

@@ -5,8 +5,9 @@
   display: flex;
 
   &__photo-wrapper {
-    max-height: 124px;
-    max-width: 124px;
+    $block-size: 124px;
+    max-height: $block-size;
+    max-width: $block-size;
     position: relative;
     border-radius: 100%;
     overflow: hidden;
