@@ -40,11 +40,12 @@ const CommentForm = ({onAddComment}) => {
 
   const onSubmitCommentData = () => {
     const date = new Date();
-    onAddComment({
+    const newComment = {
       personName: 'Сергей',
       date: `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`,
       content: textareaValue
-    });
+    };
+    onAddComment(newComment);
     setState('');
   };
 

@@ -5,27 +5,18 @@ import Services from './components/Services/Services';
 import Comments from './components/Comments/Comments';
 import CommentForm from './components/CommentForm/CommentForm';
 
-function App() {
-  const [state, setState] = useState([
-    {
-      personName: 'Самуил',
-      date: '13 октября 2011',
-      content: 'Привет, Верунь! ниче себе ты крутая. фотка класс!!!!'
-    },
-    {
-      personName: 'Лилия Семёновна',
-      date: '14 октября 2011',
-      content: `Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент,
-      это и есть всемирно известный центр огранки алмазов и торговли бриллиантами?`
-    },
-    {
-      personName: 'Лилия Семёновна',
-      date: '14 октября 2011',
-      content: 'Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент?'
-    }
-  ]);
+import {initialState, setLocalStorage} from './utils';
 
-  const onAddComment = (value) => setState((state) => state.concat(value));
+function App() {
+  const localStorageKey = 'comments';
+  const [state, setState] = useState(initialState(localStorageKey));
+
+  const onAddComment = (value) =>
+    setState((state) => {
+      const newState = state.concat(value);
+      setLocalStorage(localStorageKey, newState);
+      return newState;
+    });
 
   return (
     <div className="wrapper">

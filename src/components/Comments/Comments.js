@@ -5,6 +5,7 @@ import likeIcon from '../../assets/svg/like.svg';
 import commentIcon from '../../assets/svg/comment.svg';
 
 const Comments = (props) => {
+  const {state} = props;
   return (
     <div className="comments">
       <div className="comments__info">
@@ -19,12 +20,12 @@ const Comments = (props) => {
           </div>
           <div className="comments__amount">
             <img className="comments-icon icon" src={commentIcon} alt="comments icon" />
-            14
+            {state.length}
           </div>
         </div>
       </div>
       <div className="comments__last">
-        {props.state.map(({personName, date, content}, index) => (
+        {state.map(({personName, date, content}, index) => (
           <div key={personName + index} className="comments__item comment">
             <div className="comment__person-info">
               <div className="comment__person-name">{personName}</div>
