@@ -12,6 +12,11 @@
     display: flex;
   }
 
+  &__filter-btn,
+  &__likes {
+    cursor: pointer;
+  }
+
   &__statistics {
     margin-right: 2px;
     @include fontStyle(normal, 12px, 14px);
@@ -30,23 +35,25 @@
     align-items: start;
   }
 
-  &__filter-last,
-  &__filter-all {
+  &__filter-btn {
     border: none;
     outline: none;
     background: none;
+    padding: 0;
   }
 
-  &__filter-last {
-    margin-right: 8px;
-
-    @include fontStyle(bold, 16px, 16px);
-  }
-
-  &__filter-all {
+  &__filter-btn {
     @include fontStyle(normal, 14px, 16px);
     color: #005da1;
     text-decoration-line: underline;
+    margin-right: 8px;
+  }
+
+  .active {
+    text-decoration-line: none;
+    color: $primary-font-color;
+
+    @include fontStyle(bold, 16px, 16px);
   }
 
   &__likes,

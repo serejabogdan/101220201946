@@ -40,16 +40,16 @@ const Comments = (props) => {
     <div className="comments">
       <div className="comments__info">
         <div className="comments__filter">
-          <button className="comments__filter-last active" onClick={onAllComments}>
+          <button className={`comments__filter-btn ${isLastComments && 'active'}`} onClick={onAllComments}>
             Последние отзывы
           </button>
-          <button className="comments__filter-all" onClick={onLastComments}>
+          <button className={`comments__filter-btn ${!isLastComments && 'active'}`} onClick={onLastComments}>
             Все отзывы
           </button>
         </div>
         <div className="comments__statistics">
-          <div className="comments__likes">
-            <img className="like-icon icon-active" src={likeIcon} alt="like icon" onClick={onChangeLike} />
+          <div className="comments__likes" onClick={onChangeLike}>
+            <img className="like-icon icon-active" src={likeIcon} alt="like icon" />
             {isLiked ? 132 : 131}
           </div>
           <div className="comments__amount">
