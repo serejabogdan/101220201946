@@ -1,12 +1,14 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .user {
   padding: 14px 5px;
   display: flex;
 
   &__photo-wrapper {
-    max-height: 124px;
-    max-width: 124px;
+    $block-size: 124px;
+    max-height: $block-size;
+    max-width: $block-size;
     position: relative;
     border-radius: 100%;
     overflow: hidden;
@@ -21,29 +23,25 @@
   }
 
   &__name {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
+    @include fontStyle(bold, 16px, 20px);
     margin-bottom: 2px;
     color: $primary-font-color;
   }
 
   &__job-title {
-    font-size: 12px;
-    line-height: 20px;
+    @include fontStyle(normal, 12px, 20px);
     color: $secondary-font-color;
     margin-bottom: 5px;
   }
 
   &__current-info {
-    background-color: #fffbc8;
-    border: 1px solid #dadada;
+    background-color: $bg-light-yellow;
+    border: 1px solid $primary-border-color;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 10px 14px 10px 45px;
     margin-left: -46px;
 
-    font-size: 14px;
-    line-height: 20px;
+    @include fontStyle(normal, 14px, 20px);
   }
 }

@@ -6,7 +6,7 @@ const User = () => {
   return (
     <div className="user">
       <div className="user__photo-wrapper">
-        <img className="user__photo" src={photo} alt="" />
+        <img className="user__photo" src={photo} alt="user" />
       </div>
       <div className="user__info">
         <h1 className="user__name">Вероника Ростова</h1>
