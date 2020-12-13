@@ -16,8 +16,8 @@
   &__wrapper {
     margin-top: 7px;
 
-    border-top: 1px solid #dadada;
-    border-bottom: 1px solid #dadada;
+    border-top: 1px solid $primary-border-color;
+    border-bottom: 1px solid $primary-border-color;
   }
 
   &__amount {
