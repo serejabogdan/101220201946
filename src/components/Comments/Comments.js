@@ -29,8 +29,8 @@ const Comments = (props) => {
   const [state, setState] = useState({isLastComments: true, isLiked: false});
   const {isLastComments, isLiked} = state;
 
-  const onLastComments = () => setState({isLastComments: false});
-  const onAllComments = () => setState({isLastComments: true});
+  const onLastComments = () => setState((state) => ({...state, isLastComments: false}));
+  const onAllComments = () => setState((state) => ({...state, isLastComments: true}));
 
   const onChangeLike = () => {
     setState((state) => ({...state, isLiked: !isLiked}));
@@ -40,10 +40,10 @@ const Comments = (props) => {
     <div className="comments">
       <div className="comments__info">
         <div className="comments__filter">
-          <button className={`comments__filter-btn ${isLastComments && 'active'}`} onClick={onAllComments}>
+          <button className={`comments__filter-btn ${isLastComments && 'active'}`} onClick={onLastComments}>
             Последние отзывы
           </button>
-          <button className={`comments__filter-btn ${!isLastComments && 'active'}`} onClick={onLastComments}>
+          <button className={`comments__filter-btn ${!isLastComments && 'active'}`} onClick={onAllComments}>
             Все отзывы
           </button>
         </div>
